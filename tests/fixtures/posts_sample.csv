@@ -1,0 +1,7 @@
+post_id,candidate_key,author_id,x_handle,created_at,post_type,raw_text,post_url,has_media,retrieved_at
+sample-001,takaichi-sanae,test-author-1,takaichi_sanae,2026-01-30T01:00:00+09:00,post,JESTAを早期導入し出入国管理のDXを進めます。,https://example.invalid/sample-001,false,2026-08-30T00:00:00+09:00
+sample-002,hayashi-yoshimasa,test-author-2,hayashi09615064,2026-01-30T10:00:00+09:00,reply,@someone 外国人の社会保険料未納は在留審査に反映します。 https://example.com/detail,https://example.invalid/sample-002,false,2026-08-30T00:00:00+09:00
+sample-003,motegi-toshimitsu,test-author-3,moteging,2026-01-31T12:30:00+09:00,quote,外国人による土地取得の実態を把握し新たなルールを整備します。,https://example.invalid/sample-003,true,2026-08-30T00:00:00+09:00
+sample-004,koizumi-shinjiro,test-author-4,shinjirokoiz,2026-02-01T09:00:00+09:00,post,#地方創生 地域の交通を守るため全力で取り組みます。,https://example.invalid/sample-004,true,2026-08-30T00:00:00+09:00
+sample-005,kihara-minoru,test-author-5,kihara_minoru,2026-02-02T17:00:00+09:00,repost,RT @someone 他者の投稿,https://example.invalid/sample-005,false,2026-08-30T00:00:00+09:00
+sample-006,kiuchi-minoru,test-author-6,minoru_kiuchi,2026-02-03T20:00:00+09:00,post,https://example.com/image,https://example.invalid/sample-006,true,2026-08-30T00:00:00+09:00

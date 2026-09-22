@@ -1,0 +1,5 @@
+# X APIとは無関係な、ローカル類似度計算用の依存関係
+# PyTorchは不要なCUDA依存を避けるため、READMEの手順でCPU版を先に導入する。
+numpy>=2.0,<3
+sentence-transformers>=3.4,<6
+transformers>=4.48,<6

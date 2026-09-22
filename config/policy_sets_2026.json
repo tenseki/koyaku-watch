@@ -1,0 +1,39 @@
+{
+  "catalog": "../data/policies_2026.csv",
+  "default_set": "mvp_all",
+  "comparison_text_fields": ["title", "comparison_text", "keywords"],
+  "sets": {
+    "mvp_original": {
+      "description": "最初に選定した重複除去後の14政策",
+      "policy_ids": [
+        "ECO-001", "ECO-002", "ECO-003", "ECO-004", "ECO-005",
+        "ECO-006", "ECO-007", "ECO-008", "ECO-009", "ECO-010",
+        "EDU-002", "WEL-001", "TAX-001", "INF-001"
+      ]
+    },
+    "institution_and_foreign_policy": {
+      "description": "皇室典範、衆議院議員定数削減、外国人政策の重点確認用",
+      "policy_ids": [
+        "CON-001", "POL-001", "FOR-001", "FOR-002", "FOR-003",
+        "FOR-004", "FOR-005", "FOR-006", "FOR-007"
+      ]
+    },
+    "foreign_policy_only": {
+      "description": "外国人政策のみを個別施策単位で比較する実験用",
+      "policy_ids": [
+        "FOR-001", "FOR-002", "FOR-003", "FOR-004", "FOR-005",
+        "FOR-006", "FOR-007"
+      ]
+    },
+    "mvp_all": {
+      "description": "当初14政策と今回追加した制度・外国人政策をすべて含む既定セット",
+      "policy_ids": [
+        "ECO-001", "ECO-002", "ECO-003", "ECO-004", "ECO-005",
+        "ECO-006", "ECO-007", "ECO-008", "ECO-009", "ECO-010",
+        "EDU-002", "WEL-001", "TAX-001", "INF-001", "CON-001",
+        "POL-001", "FOR-001", "FOR-002", "FOR-003", "FOR-004",
+        "FOR-005", "FOR-006", "FOR-007"
+      ]
+    }
+  }
+}

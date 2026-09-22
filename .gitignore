@@ -1,0 +1,28 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+*~
+.vscode/
+.idea/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local backup archives
+backups/
+*.tar.gz
+*.zip
+
+# Private X data and generated analysis outputs
+data/private/
+outputs/

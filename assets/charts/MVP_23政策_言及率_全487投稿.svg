@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1400" viewBox="0 0 1600 1400">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+text { font-family: "Noto Sans CJK JP", "Yu Gothic", "Hiragino Sans", sans-serif; fill: #17212b; }
+.title { font-size: 34px; font-weight: 700; }
+.subtitle { font-size: 19px; fill: #5f6b76; }
+.label { font-size: 16px; }
+.code { font-size: 13px; fill: #5f6b76; }
+.axis { font-size: 15px; fill: #5f6b76; }
+.value { font-size: 15px; font-variant-numeric: tabular-nums; }
+.note { font-size: 16px; fill: #5f6b76; }
+</style>
+<text class="title" x="40" y="52">23政策の言及率</text>
+<text class="subtitle" x="40" y="86">対象：13アカウント・487投稿（2026年1月30日〜2月3日）</text>
+<rect x="40" y="112" width="24" height="8" fill="#2368a2"/>
+<text class="label" x="74" y="122">具体策</text>
+<rect x="165" y="112" width="24" height="8" fill="#d27328"/>
+<text class="label" x="199" y="122">政策方向以上</text>
+<text class="subtitle" x="384" y="122">○は0件</text>
+<text class="axis" x="40" y="174">政策項目</text>
+<text class="axis" x="1408" y="174" text-anchor="middle">具体 / 方向</text>
+<text class="axis" x="1532" y="174" text-anchor="middle">発信者数</text>
+<line x1="535.0" y1="184" x2="535.0" y2="1254" stroke="#d9dee3" stroke-width="1"/>
+<text class="axis" x="535.0" y="174" text-anchor="middle">0%</text>
+<line x1="692.0" y1="184" x2="692.0" y2="1254" stroke="#d9dee3" stroke-width="1"/>
+<text class="axis" x="692.0" y="174" text-anchor="middle">1%</text>
+<line x1="849.0" y1="184" x2="849.0" y2="1254" stroke="#d9dee3" stroke-width="1"/>
+<text class="axis" x="849.0" y="174" text-anchor="middle">2%</text>
+<line x1="1006.0" y1="184" x2="1006.0" y2="1254" stroke="#d9dee3" stroke-width="1"/>
+<text class="axis" x="1006.0" y="174" text-anchor="middle">3%</text>
+<line x1="1163.0" y1="184" x2="1163.0" y2="1254" stroke="#d9dee3" stroke-width="1"/>
+<text class="axis" x="1163.0" y="174" text-anchor="middle">4%</text>
+<line x1="1320.0" y1="184" x2="1320.0" y2="1254" stroke="#d9dee3" stroke-width="1"/>
+<text class="axis" x="1320.0" y="174" text-anchor="middle">5%</text>
+<text class="label" x="40" y="218">ガソリン暫定税率廃止（12月31日）</text>
+<text class="code" x="505" y="218" text-anchor="end">ECO-001</text>
+<circle cx="535" cy="209.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<rect x="535" y="220" width="773.7" height="7" fill="#d27328"/>
+<circle cx="1308.7" cy="223.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="218" text-anchor="middle">0.0% / 4.9%</text>
+<text class="value" x="1532" y="218" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="264">軽油引取税廃止（2026年4月1日）</text>
+<text class="code" x="505" y="264" text-anchor="end">ECO-002</text>
+<circle cx="535" cy="255.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<rect x="535" y="266" width="773.7" height="7" fill="#d27328"/>
+<circle cx="1308.7" cy="269.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="264" text-anchor="middle">0.0% / 4.9%</text>
+<text class="value" x="1532" y="264" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="310">年収の壁178万円へ引上げ（年末調整から）</text>
+<text class="code" x="505" y="310" text-anchor="end">ECO-003</text>
+<circle cx="535" cy="301.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="315.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="310" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="310" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="329" x2="1560" y2="329" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="356">飲食料品消費税2年間非課税（国民会議で検討）</text>
+<text class="code" x="505" y="356" text-anchor="end">ECO-004</text>
+<rect x="535" y="344" width="32.2" height="7" fill="#2368a2"/>
+<circle cx="567.2" cy="347.5" r="4.5" fill="#2368a2"/>
+<rect x="535" y="358" width="32.2" height="7" fill="#d27328"/>
+<circle cx="567.2" cy="361.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="356" text-anchor="middle">0.2% / 0.2%</text>
+<text class="value" x="1532" y="356" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="402">電気・ガス代支援（約7,300円/世帯）</text>
+<text class="code" x="505" y="402" text-anchor="end">ECO-005</text>
+<rect x="535" y="390" width="773.7" height="7" fill="#2368a2"/>
+<circle cx="1308.7" cy="393.5" r="4.5" fill="#2368a2"/>
+<rect x="535" y="404" width="773.7" height="7" fill="#d27328"/>
+<circle cx="1308.7" cy="407.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="402" text-anchor="middle">4.9% / 4.9%</text>
+<text class="value" x="1532" y="402" text-anchor="middle">1 / 13</text>
+<line x1="40" y1="421" x2="1560" y2="421" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="448">高校授業料無償化（令和8年度から）</text>
+<text class="code" x="505" y="448" text-anchor="end">ECO-006</text>
+<circle cx="535" cy="439.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="453.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="448" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="448" text-anchor="middle">0 / 13</text>
+<text class="label" x="40" y="494">公立小学校給食無償化（令和8年度から）</text>
+<text class="code" x="505" y="494" text-anchor="end">ECO-007</text>
+<circle cx="535" cy="485.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<rect x="535" y="496" width="64.5" height="7" fill="#d27328"/>
+<circle cx="599.5" cy="499.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="494" text-anchor="middle">0.0% / 0.4%</text>
+<text class="value" x="1532" y="494" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="540">出産費用自己負担無償化（法案提出予定）</text>
+<text class="code" x="505" y="540" text-anchor="end">ECO-008</text>
+<circle cx="535" cy="531.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="545.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="540" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="540" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="559" x2="1560" y2="559" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="586">医療・介護従事者処遇改善（3％・月1万円）</text>
+<text class="code" x="505" y="586" text-anchor="end">ECO-009</text>
+<rect x="535" y="574" width="32.2" height="7" fill="#2368a2"/>
+<circle cx="567.2" cy="577.5" r="4.5" fill="#2368a2"/>
+<rect x="535" y="588" width="64.5" height="7" fill="#d27328"/>
+<circle cx="599.5" cy="591.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="586" text-anchor="middle">0.2% / 0.4%</text>
+<text class="value" x="1532" y="586" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="632">給付付き税額控除（制度設計を検討）</text>
+<text class="code" x="505" y="632" text-anchor="end">ECO-010</text>
+<circle cx="535" cy="623.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="637.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="632" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="632" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="651" x2="1560" y2="651" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="678">中学校35人学級（令和8年度から）</text>
+<text class="code" x="505" y="678" text-anchor="end">EDU-002</text>
+<rect x="535" y="666" width="32.2" height="7" fill="#2368a2"/>
+<circle cx="567.2" cy="669.5" r="4.5" fill="#2368a2"/>
+<rect x="535" y="680" width="32.2" height="7" fill="#d27328"/>
+<circle cx="567.2" cy="683.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="678" text-anchor="middle">0.2% / 0.2%</text>
+<text class="value" x="1532" y="678" text-anchor="middle">1 / 13</text>
+<line x1="40" y1="697" x2="1560" y2="697" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="724">こども誰でも通園制度の本格実施</text>
+<text class="code" x="505" y="724" text-anchor="end">WEL-001</text>
+<circle cx="535" cy="715.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="729.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="724" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="724" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="743" x2="1560" y2="743" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="770">自動車環境性能割廃止（2026年4月）</text>
+<text class="code" x="505" y="770" text-anchor="end">TAX-001</text>
+<circle cx="535" cy="761.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="775.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="770" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="770" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="789" x2="1560" y2="789" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="816">副首都機能法案の策定・成立</text>
+<text class="code" x="505" y="816" text-anchor="end">INF-001</text>
+<circle cx="535" cy="807.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="821.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="816" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="816" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="835" x2="1560" y2="835" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="862">男系男子の養子縁組を可能にする皇室典範改正</text>
+<text class="code" x="505" y="862" text-anchor="end">CON-001</text>
+<circle cx="535" cy="853.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="867.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="862" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="862" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="881" x2="1560" y2="881" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="908">衆議院議員定数を1割削減</text>
+<text class="code" x="505" y="908" text-anchor="end">POL-001</text>
+<circle cx="535" cy="899.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="913.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="908" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="908" text-anchor="middle">0 / 13</text>
+<line x1="40" y1="927" x2="1560" y2="927" stroke="#d9dee3" stroke-width="1"/>
+<text class="label" x="40" y="954">不法滞在者ゼロと退去強制の迅速化</text>
+<text class="code" x="505" y="954" text-anchor="end">FOR-001</text>
+<circle cx="535" cy="945.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="959.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="954" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="954" text-anchor="middle">0 / 13</text>
+<text class="label" x="40" y="1000">JESTA早期導入と出入国在留DX</text>
+<text class="code" x="505" y="1000" text-anchor="end">FOR-002</text>
+<circle cx="535" cy="991.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="1005.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="1000" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="1000" text-anchor="middle">0 / 13</text>
+<text class="label" x="40" y="1046">在留資格・永住・帰化審査の厳格化</text>
+<text class="code" x="505" y="1046" text-anchor="end">FOR-003</text>
+<rect x="535" y="1034" width="64.5" height="7" fill="#2368a2"/>
+<circle cx="599.5" cy="1037.5" r="4.5" fill="#2368a2"/>
+<rect x="535" y="1048" width="64.5" height="7" fill="#d27328"/>
+<circle cx="599.5" cy="1051.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="1046" text-anchor="middle">0.4% / 0.4%</text>
+<text class="value" x="1532" y="1046" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="1092">外国人の税・社会保険料未納と医療費未払い対策</text>
+<text class="code" x="505" y="1092" text-anchor="end">FOR-004</text>
+<rect x="535" y="1080" width="32.2" height="7" fill="#2368a2"/>
+<circle cx="567.2" cy="1083.5" r="4.5" fill="#2368a2"/>
+<rect x="535" y="1094" width="32.2" height="7" fill="#d27328"/>
+<circle cx="567.2" cy="1097.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="1092" text-anchor="middle">0.2% / 0.2%</text>
+<text class="value" x="1532" y="1092" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="1138">外国人の土地・不動産取得の把握と法的規制</text>
+<text class="code" x="505" y="1138" text-anchor="end">FOR-005</text>
+<rect x="535" y="1126" width="32.2" height="7" fill="#2368a2"/>
+<circle cx="567.2" cy="1129.5" r="4.5" fill="#2368a2"/>
+<rect x="535" y="1140" width="32.2" height="7" fill="#d27328"/>
+<circle cx="567.2" cy="1143.5" r="4.5" fill="#d27328"/>
+<text class="value" x="1408" y="1138" text-anchor="middle">0.2% / 0.2%</text>
+<text class="value" x="1532" y="1138" text-anchor="middle">1 / 13</text>
+<text class="label" x="40" y="1184">日本語・日本の制度学習を在留審査に活用</text>
+<text class="code" x="505" y="1184" text-anchor="end">FOR-006</text>
+<circle cx="535" cy="1175.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="1189.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="1184" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="1184" text-anchor="middle">0 / 13</text>
+<text class="label" x="40" y="1230">外国人材との共生を含む人口減少対策</text>
+<text class="code" x="505" y="1230" text-anchor="end">FOR-007</text>
+<circle cx="535" cy="1221.5" r="4" fill="#ffffff" stroke="#2368a2" stroke-width="2"/>
+<circle cx="535" cy="1235.5" r="4" fill="#ffffff" stroke="#d27328" stroke-width="2"/>
+<text class="value" x="1408" y="1230" text-anchor="middle">0.0% / 0.0%</text>
+<text class="value" x="1532" y="1230" text-anchor="middle">0 / 13</text>
+<line x1="535" y1="1254" x2="1320" y2="1254" stroke="#17212b" stroke-width="1"/>
+<text class="axis" x="927.5" y="1288" text-anchor="middle">全487投稿に占める割合</text>
+<text class="note" x="40" y="1344">具体策が0件：16 / 23政策。政策方向以上が0件：13 / 23政策。</text>
+<text class="note" x="40" y="1372">注：最多24件は、同一アカウントによる地域別投稿シリーズ。発信者数を併記し、投稿回数と発信の広がりを区別した。</text>
+</svg>

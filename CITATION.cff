@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or analysis workflow, please cite it."
+title: "公約ウォッチ"
+type: software
+authors:
+  - name: "Tenseki"
+version: 0.1.0
+repository-code: "https://github.com/tenseki/koyaku-watch"
+license: MIT
+abstract: >-
+  選挙公約と選挙期間中の候補者公式Xアカウントの発信を、
+  再適用可能な取得・ラベリング・監査・集計手順で比較するための分析基盤。

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "target": {
+    "candidate_count": 13,
+    "timezone": "Asia/Tokyo",
+    "start_time_jst": "2026-01-30T00:00:00+09:00",
+    "end_time_jst_exclusive": "2026-02-04T00:00:00+09:00",
+    "candidate_data": "not_included_in_public_release"
+  },
+  "human_labeling": {
+    "rules_version": "1.0",
+    "allowed_labels": ["specific_measure", "policy_direction", "topic_only", "none", "uncertain"],
+    "reason_code_field": "judgment_reason_code",
+    "allowed_reason_codes": ["election_call_only", "campaign_event_notice_only"]
+  },
+  "analysis_views": {
+    "specific_measure_only": ["specific_measure"],
+    "policy_direction_or_more": ["specific_measure", "policy_direction"],
+    "topic_context_only": ["topic_only"]
+  },
+  "embedding": {
+    "role": "candidate_retrieval_baseline",
+    "status": "selected_after_exhaustive_mvp_validation",
+    "selection_rule": "keyword_match_or_similarity_top_3"
+  }
+}
