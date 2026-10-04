@@ -30,4 +30,3 @@ jobs:
       - name: Rebuild and compare both SVG charts
         if: always()
         run: python scripts/check_public_charts.py
-

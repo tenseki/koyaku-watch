@@ -1,3 +1,2 @@
 # Unit tests use synthetic inputs; no model download or X API access.
 numpy==2.2.6
-

@@ -39,4 +39,3 @@ python scripts/check_public_charts.py
 
 設定の参照元：[checkout](https://github.com/actions/checkout)、
 [setup-python](https://github.com/actions/setup-python)。
-
