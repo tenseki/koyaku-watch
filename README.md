@@ -1,5 +1,9 @@
 # 公約ウォッチ
 
+[![Public reproducibility](https://github.com/tenseki/koyaku-watch/actions/workflows/public-reproducibility.yml/badge.svg)](https://github.com/tenseki/koyaku-watch/actions/workflows/public-reproducibility.yml)
+
+公開CSVからのSVG再生成・テスト・公開前監査を自動確認します。[実行内容と確認方法](PUBLIC_REPRODUCIBILITY.md)。
+
 選挙公約と、選挙期間中の候補者によるX上の発信との対応を検証し、政策ごとの言及状況を再現・検証可能な形で可視化するプロジェクトです。
 
 13アカウント・487分析対象投稿によるMVPについて、取得、前処理、全件レビュー、

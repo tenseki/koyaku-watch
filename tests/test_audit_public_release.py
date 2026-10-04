@@ -1,4 +1,5 @@
 import sys
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -6,10 +7,20 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from audit_public_release import audit_paths
+from audit_public_release import audit_paths, candidate_paths
 
 
 class AuditPublicReleaseTest(unittest.TestCase):
+    def test_japanese_filename_is_audited(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            subprocess.run(["git", "init", "-q", str(root)], check=True)
+            name = Path("日本語の記録.md")
+            (root / name).write_text("X_API_BEARER_TOKEN=" + "sensitive" * 5, encoding="utf-8")
+            paths = candidate_paths(root)
+            self.assertIn(name, paths)
+            self.assertTrue(any("bearer token" in e for e in audit_paths(root, paths)))
+
     def test_safe_snapshot_passes(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -21,13 +21,13 @@ PRIVATE_KEY_MARKER = "-----BEGIN " + "PRIVATE KEY-----"
 def candidate_paths(root: Path) -> list[Path]:
     if (root / ".git").exists():
         result = subprocess.run(
-            ["git", "ls-files", "--cached", "--others", "--exclude-standard"],
+            ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
             cwd=root,
             check=True,
             capture_output=True,
             text=True,
         )
-        paths = [Path(line) for line in result.stdout.splitlines() if line]
+        paths = [Path(name) for name in result.stdout.split("\0") if name]
         return [path for path in paths if (root / path).is_file()]
     return [
         path.relative_to(root)
