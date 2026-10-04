@@ -26,7 +26,9 @@ from policy_catalog import select_policy_rows
 
 
 class SentenceTransformerEncoder:
-    def __init__(self, model_name: str, revision: str, device: str | None) -> None:
+    def __init__(
+        self, model_name: str, revision: str, device: str | None, batch_size: int
+    ) -> None:
         try:
             from sentence_transformers import SentenceTransformer
         except ImportError as error:
@@ -34,11 +36,15 @@ class SentenceTransformerEncoder:
                 "sentence-transformers is required; install requirements-analysis.txt"
             ) from error
         self.model = SentenceTransformer(model_name, revision=revision, device=device)
+        self.batch_size = batch_size
 
     def encode(self, texts: Sequence[str]) -> np.ndarray:
         return np.asarray(
             self.model.encode(
-                list(texts), convert_to_numpy=True, show_progress_bar=True
+                list(texts),
+                batch_size=self.batch_size,
+                convert_to_numpy=True,
+                show_progress_bar=True,
             )
         )
 
@@ -60,6 +66,10 @@ def main() -> None:
     parser.add_argument("--policy-set")
     parser.add_argument("--device", help="Sentence Transformers device, e.g. cpu or cuda")
     parser.add_argument(
+        "--batch-size", type=int, default=32,
+        help="Embedding batch size; changes execution speed, not the analysis rules",
+    )
+    parser.add_argument(
         "--model",
         help="Override embedding model from the analysis config (requires --revision)",
     )
@@ -70,6 +80,8 @@ def main() -> None:
     args = parser.parse_args()
     if (args.model is None) != (args.revision is None):
         parser.error("--model and --revision must be specified together")
+    if args.batch_size < 1:
+        parser.error("--batch-size must be at least 1")
     config = json.loads(args.analysis_config.read_text(encoding="utf-8"))
     policy_definition = config["policy"]
     policy_config_path = Path(policy_definition["config"])
@@ -85,7 +97,7 @@ def main() -> None:
         "revision": args.revision or embedding["revision"],
     }
     encoder = SentenceTransformerEncoder(
-        run_embedding["model"], run_embedding["revision"], args.device
+        run_embedding["model"], run_embedding["revision"], args.device, args.batch_size
     )
     similarity_rows = calculate_similarity_rows(
         policy_rows, posts, policy_set, policy_config["comparison_text_fields"],
@@ -126,6 +138,7 @@ def main() -> None:
             "transformers": package_version("transformers"),
             "torch": package_version("torch"),
         },
+        "execution": {"device": args.device, "batch_size": args.batch_size},
     }
     metadata_path = args.output_dir / "run_metadata.json"
     metadata_path.write_text(

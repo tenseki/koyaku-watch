@@ -15,6 +15,10 @@ class EvaluateRetrievalTest(unittest.TestCase):
             {"A": "specific_measure", "B": "topic_only"},
             parse_labels("A=specific_measure|B=topic_only"),
         )
+        self.assertEqual(
+            {"A": "specific_measure", "B": "topic_only"},
+            parse_labels(" A = specific_measure | B=topic_only "),
+        )
 
     def test_keyword_and_rank_union(self) -> None:
         review = [

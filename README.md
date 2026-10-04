@@ -6,7 +6,8 @@
 二次監査、検索モデル比較、政策別集計、図表、公開用の結果レポートまで完了して
 います。X APIはPay Per UseのApp-only読み取り認証を使用しました。
 
-MVPの結果は[「MVP分析結果」](MVP分析結果_2026.md)にまとめています。これは
+MVPの結果は[「MVP分析結果」](MVP分析結果_2026.md)、全229候補を対象とした
+集計は[「全候補者分析結果」](全候補者分析結果_2026.md)にまとめています。これは
 全候補者・全公約・全SNSを扱う結論ではなく、事前に固定した対象と手続きで、
 公約への言及をどのように観察・集計できるかを検証したものです。
 
@@ -37,11 +38,13 @@ MVPの結果は[「MVP分析結果」](MVP分析結果_2026.md)にまとめて�
 ## 現在の内容
 
 - `MVP分析結果_2026.md`：MVPの対象、結果、図表、解釈と限界
+- `全候補者分析結果_2026.md`：全229候補の匿名集計、図表、読み方と限界
+- `全候補者分析設計書_2026.md`：全候補版の対象、判定、集計、公開範囲
 - `assets/charts/`：Web用SVGとnote・SNS用PNGの政策別言及率グラフ
 - `分析設計書_MVP.md`：目的、対象範囲、分析方法、公開方針
 - `scripts/`：候補者・政策データ生成、投稿前処理、類似度計算、ラベリング候補生成
 - `config/`：MVP対象、政策セット、モデル、ラベル、集計ビューの設定
-- `data/`：比較用政策マスタ、匿名のMVP集計、入力データ形式の仕様
+- `data/`：比較用政策マスタ、匿名のMVP・全候補集計、入力データ形式の仕様
 - `sources/`：一次資料の公式URL、取得日時、ファイル名、ハッシュの記録
 - `RECOVERY.md`：現在地点、残作業、PCやChatGPT/Codexの再設定後の復旧手順
 - `PUBLICATION_CHECKLIST.md`：GitHub公開前の分離・監査手順
@@ -63,9 +66,12 @@ MVPの結果は[「MVP分析結果」](MVP分析結果_2026.md)にまとめて�
 
 非公開データでは、投稿を識別して重複を除き、事前に定めた基準で政策項目ごとの
 最終ラベルを集計します。公開データには、個人・アカウント・投稿を識別できる情報
-および投稿本文を含めません。公開用の政策別集計は
-[`data/mvp_policy_summary_2026.csv`](data/mvp_policy_summary_2026.csv)、全体集計は
-[`data/mvp_analysis_summary_2026.json`](data/mvp_analysis_summary_2026.json)です。
+および投稿本文を含めません。公開用の政策別集計と全体集計は、MVP版の
+[`data/mvp_policy_summary_2026.csv`](data/mvp_policy_summary_2026.csv)、
+[`data/mvp_analysis_summary_2026.json`](data/mvp_analysis_summary_2026.json)に加え、
+全候補版の[`data/all_candidates_policy_summary_2026.csv`](data/all_candidates_policy_summary_2026.csv)、
+[`data/all_candidates_analysis_summary_2026.json`](data/all_candidates_analysis_summary_2026.json)を含む。
+列の意味は[全候補版集計データの説明](data/README_all_candidates_aggregate.md)を参照する。
 
 自民党公式サイトから分析時に保存したPDF、HTML、JSONも公開版には収録せず、
 公式URLとハッシュだけを残します。
@@ -74,11 +80,6 @@ MVPの結果は[「MVP分析結果」](MVP分析結果_2026.md)にまとめて�
 そのままPublicへ変更しません。公開時は
 [`PUBLICATION_CHECKLIST.md`](PUBLICATION_CHECKLIST.md) に従い、
 公開可能な最新版だけから新しい履歴を作成します。
-
-候補者名簿、候補者・アカウント対応表、投稿単位の分析設定はこの公開版に含めない。
-それらを入力として使う取得・分析スクリプトは、別の選挙・対象で利用する際に、利用者が
-各サービスの規約に従って用意したデータを与えることを想定している。本公開版で誰でも
-確認できる最小再現例は、匿名集計CSVからの図表再生成である。
 
 ## 着想と参考
 
@@ -96,13 +97,24 @@ MVPの結果は[「MVP分析結果」](MVP分析結果_2026.md)にまとめて�
 - 候補者・政策データの生成：Python 3（追加パッケージは不要）
 - 埋め込み類似度の計算：`requirements-analysis.txt` のパッケージ
 
-## 公開集計からの図表再生成
+## 生成結果の確認
 
-公開版に含まれる匿名集計から、23政策のSVGグラフを再生成できます。
+MVP候補者一覧は次のコマンドで再生成できます。
 
 ```bash
-python3 scripts/render_mvp_policy_chart.py
+python3 scripts/build_mvp_candidate_list.py \
+  --candidates data/candidates_2026.csv \
+  --config config/mvp_candidates_2026_cabinet.json \
+  --output /tmp/mvp_candidates_2026.csv
 ```
+
+出力を保存済みデータと比較します。
+
+```bash
+cmp /tmp/mvp_candidates_2026.csv data/mvp_candidates_2026.csv
+```
+
+何も表示されなければ同一です。
 
 ## 比較する政策の選択
 
@@ -119,7 +131,7 @@ python3 scripts/build_policy_set.py \
 
 ## X API取得前の分析基盤
 
-X APIの取得処理と分析処理を分離するため、後段は [標準投稿データ形式](data/README_posts_schema.md) のCSVを入力とします。MVPで使った候補者・アカウント対応表と投稿単位の分析設定は、匿名化方針により公開版には含めません。
+X APIの取得処理と分析処理を分離するため、後段は [標準投稿データ形式](data/README_posts_schema.md) のCSVを入力とします。
 
 人工サンプルを前処理するには次を実行します。
 
@@ -154,7 +166,7 @@ python3 scripts/check_x_api.py --fetch-pinned-post
 
 ## 限定期間の試験取得
 
-Full-archive Searchを使い、利用者が用意した候補者設定と対象期間から投稿を取得します。公開版には候補者の識別データを含めないため、実行前に設定を与える必要があります。既定では費用上限を表示するだけでAPIは呼び出しません。
+Full-archive Searchを使い、MVP設定の対象期間から候補者1名の投稿を取得します。既定では高市早苗候補の最大10投稿について、費用上限を表示するだけでAPIは呼び出しません。
 
 ```bash
 python3 scripts/fetch_x_posts.py

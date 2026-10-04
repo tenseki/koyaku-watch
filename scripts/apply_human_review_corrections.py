@@ -92,7 +92,8 @@ def main() -> int:
         normalized_dates = 0
         if args.normalize_reviewed_at:
             for row in rows:
-                value = row["reviewed_at"].strip()
+                original_value = row["reviewed_at"].strip()
+                value = original_value.replace("–", "-").replace("—", "-")
                 if not value:
                     continue
                 for date_format in (
@@ -108,7 +109,7 @@ def main() -> int:
                         normalized = ""
                 if not normalized:
                     raise ValueError(f"unsupported reviewed_at value: {value}")
-                if normalized != value:
+                if normalized != original_value:
                     row["reviewed_at"] = normalized
                     normalized_dates += 1
         temporary = args.input.with_suffix(args.input.suffix + ".tmp")

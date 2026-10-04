@@ -22,6 +22,8 @@ def parse_labels(value: str) -> dict[str, str]:
     labels: dict[str, str] = {}
     for item in value.split("|"):
         policy_id, separator, level = item.partition("=")
+        policy_id = policy_id.strip()
+        level = level.strip()
         if not separator or not policy_id or not level:
             raise ValueError(f"invalid policy label: {item!r}")
         labels[policy_id] = level

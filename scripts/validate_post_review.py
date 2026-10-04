@@ -97,9 +97,10 @@ def main() -> int:
         policy_path = Path(config["policy"]["config"])
         if not policy_path.is_absolute():
             policy_path = (args.analysis_config.parent / policy_path).resolve()
-        _, policy_rows, _ = select_policy_rows(
-            policy_path, config["policy"]["formal_mvp_set"]
-        )
+        policy_set = config["policy"].get("formal_mvp_set") or config["policy"].get("formal_set")
+        if not policy_set:
+            raise ValueError("policy config requires formal_mvp_set or formal_set")
+        _, policy_rows, _ = select_policy_rows(policy_path, policy_set)
         with args.input.open(encoding="utf-8", newline="") as file:
             rows = list(csv.DictReader(file))
         errors = validate_rows(rows, config, {row["policy_id"] for row in policy_rows})

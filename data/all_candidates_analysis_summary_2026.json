@@ -1,0 +1,50 @@
+{
+  "policy_set": "mvp_all",
+  "post_count": 7758,
+  "candidate_count": 229,
+  "policy_count": 23,
+  "posts": {
+    "no_selected_policy_mention": 7561,
+    "any_selected_policy_mention": 197,
+    "specific_measure": 39,
+    "policy_direction_or_more": 145,
+    "topic_context": 79
+  },
+  "label_assignments": {
+    "policy_direction": 131,
+    "specific_measure": 51,
+    "topic_only": 87,
+    "uncertain": 2
+  },
+  "policies": {
+    "with_specific_measure": 15,
+    "with_direction_or_more": 20,
+    "with_any_label": 20
+  },
+  "candidate_breadth": {
+    "with_any_selected_policy_mention": 74,
+    "with_policy_direction_or_more": 53,
+    "with_specific_measure": 26,
+    "largest_specific_post_contribution": 4,
+    "largest_specific_post_share": 0.10256410256410256,
+    "largest_total_post_contribution": 247,
+    "largest_total_post_share": 0.03183810260376386
+  },
+  "post_types": {
+    "post": {
+      "posts": 5240,
+      "specific_measure_posts": 31,
+      "specific_measure_density": 0.005916030534351145
+    },
+    "quote": {
+      "posts": 816,
+      "specific_measure_posts": 3,
+      "specific_measure_density": 0.003676470588235294
+    },
+    "reply": {
+      "posts": 1702,
+      "specific_measure_posts": 5,
+      "specific_measure_density": 0.002937720329024677
+    }
+  }
+}

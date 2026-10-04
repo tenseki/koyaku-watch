@@ -120,6 +120,8 @@ def build_summary(
     topic_posts = [row for row, labels in prepared if "topic_only" in labels.values()]
     any_posts = [row for row, labels in prepared if labels]
     specific_by_candidate = Counter(row["candidate_key"] for row in specific_posts)
+    direction_by_candidate = Counter(row["candidate_key"] for row in direction_posts)
+    any_by_candidate = Counter(row["candidate_key"] for row in any_posts)
     volume_by_candidate = Counter(row["candidate_key"] for row, _ in prepared)
 
     post_type_summary: dict[str, dict[str, int | float]] = {}
@@ -162,6 +164,8 @@ def build_summary(
             ),
         },
         "candidate_breadth": {
+            "with_any_selected_policy_mention": len(any_by_candidate),
+            "with_policy_direction_or_more": len(direction_by_candidate),
             "with_specific_measure": len(specific_by_candidate),
             "largest_specific_post_contribution": max(specific_by_candidate.values(), default=0),
             "largest_specific_post_share": (
@@ -207,6 +211,10 @@ def main() -> None:
     parser.add_argument(
         "--output-json", type=Path, default=root / "data/mvp_analysis_summary_2026.json"
     )
+    parser.add_argument(
+        "--summary-label", default="MVP",
+        help="Label used only in the completion message (for example: 全候補者).",
+    )
     args = parser.parse_args()
 
     _, policy_rows, _ = select_policy_rows(args.policy_config, args.policy_set)
@@ -220,7 +228,7 @@ def main() -> None:
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     print(
-        f"MVP集計: {summary['post_count']}投稿 / "
+        f"{args.summary_label}集計: {summary['post_count']}投稿 / "
         f"{summary['candidate_count']}アカウント / {summary['policy_count']}政策"
     )
 

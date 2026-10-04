@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "target": {
+    "candidate_file": "../data/candidate_x_accounts_2026.csv",
+    "candidate_count": 229,
+    "timezone": "Asia/Tokyo",
+    "start_time_jst": "2026-01-30T00:00:00+09:00",
+    "end_time_jst_exclusive": "2026-02-04T00:00:00+09:00",
+    "start_time_utc": "2026-01-29T15:00:00Z",
+    "end_time_utc_exclusive": "2026-02-03T15:00:00Z"
+  },
+  "post_processing": {
+    "accepted_post_types": ["post", "reply", "quote"],
+    "excluded_post_types": ["repost"],
+    "remove_urls": true,
+    "remove_mentions": true,
+    "keep_hashtags": true,
+    "normalize_whitespace": true
+  },
+  "policy": {
+    "config": "policy_sets_2026.json",
+    "formal_set": "mvp_all"
+  },
+  "embedding": {
+    "model": "cl-nagoya/ruri-v3-70m",
+    "revision": "07a8b0aba47d29d2ca21f89b915c1efe2c23d1cc",
+    "role": "candidate_retrieval_baseline",
+    "status": "selected_after_exhaustive_mvp_validation",
+    "selection_rule": "keyword_match_or_similarity_top_3",
+    "mvp_validation_date": "2026-09-05",
+    "query_prefix": "検索クエリ: ",
+    "document_prefix": "検索文書: ",
+    "similarity": "cosine",
+    "validation_comparisons": ["cl-nagoya/ruri-v3-310m", "keyword_only"]
+  },
+  "candidate_sampling": {
+    "top_k": 3,
+    "middle_sample_size": 2,
+    "low_sample_size": 2,
+    "random_seed": 2026,
+    "middle_percentile_start": 0.4,
+    "middle_percentile_end": 0.6,
+    "low_percentile_start": 0.8
+  },
+  "human_labeling": {
+    "rules_version": "1.0",
+    "field": "mention_level",
+    "allowed_labels": [
+      "specific_measure",
+      "policy_direction",
+      "topic_only",
+      "none",
+      "uncertain"
+    ],
+    "evidence_field": "evidence_text",
+    "reason_code_field": "judgment_reason_code",
+    "allowed_reason_codes": [
+      "target_specific_measure",
+      "target_policy_direction",
+      "target_topic_only",
+      "election_call_only",
+      "campaign_event_notice_only",
+      "unrelated_topic",
+      "insufficient_context",
+      "ambiguous_policy_mapping",
+      "other"
+    ],
+    "reason_field": "judgment_reason"
+  },
+  "post_review": {
+    "schema_version": "1.0",
+    "batch_size": 40,
+    "random_seed": 2026,
+    "ai_label_format": "none or POLICY_ID=mention_level separated by |",
+    "human_label_format": "none or POLICY_ID=mention_level separated by |",
+    "allowed_confidence": ["high", "medium", "low"]
+  },
+  "analysis_views": {
+    "specific_measure_only": ["specific_measure"],
+    "policy_direction_or_more": ["specific_measure", "policy_direction"],
+    "topic_context_only": ["topic_only"]
+  }
+}
